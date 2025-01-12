@@ -1,0 +1,171 @@
+/* General Body Styling */
+body {
+    font-family: 'Times', sans-serif;
+    color: #fff;
+    background: url('../static/bg.jpg') center center / cover no-repeat; /* Background image */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Dark Overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+/* Left Section Styling */
+.left-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /* Center the text */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.left-section h1 {
+    font-size: 3.5em; /* Increased font size */
+    margin: 0;
+    color: #ffdd57; /* Bright color for heading */
+}
+
+.left-section p {
+    font-size: 1.5em; /* Increased font size */
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+/* Right Section Styling */
+.right-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0 12px 12px 0;
+    color: #333;
+}
+
+/* Card Styling */
+.card {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 2em; /* Increased font size */
+    color: #4CAF50;
+}
+
+.card form {
+    margin-top: 20px;
+}
+
+.card label {
+    font-size: 1.2em;
+    color: #333;
+    font-family:'Times',sans-serif;
+}
+
+.card input[type="file"] {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(240, 240, 240, 0.9);
+    font-family:'Times',sans-serif;
+}
+
+.card button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2em;
+    transition: background 0.3s;
+    font-family:'Times',sans-serif;
+}
+
+.card button:hover {
+    background-color: #45a049;
+}
+
+.card h3 {
+    margin-top: 20px;
+}
+
+.card img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-section, .right-section {
+        border-radius: 12px;
+    }
+
+    .right-section {
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+/* Card Styling */
+.card {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    height: 500px; /* Fixed height for the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden; /* Prevents content from expanding outside the card */
+}
+
+/* Image Styling */
+.card img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; /* Ensures the image fits well within the card */
+    object-fit: contain; /* Keeps the image proportionate */
+}
